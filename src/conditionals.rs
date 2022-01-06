@@ -1,144 +1,141 @@
-// ** CONDITIONALS ** 
+// ** CONDITIONALS **
 
 // Conditionals - Used to check the condition of an expression and act on the result
 
 pub fn run() {
+    {
+        println!("\n=======================================");
+        println!("|| BASIC IF / ELSE CONDITIONAL TESTS ||");
+        println!("=======================================");
 
-	{
-		println!("\n=======================================");
-		println!("|| BASIC IF / ELSE CONDITIONAL TESTS ||");
-		println!("=======================================");
-	
-		let mut age = 18;
-	
-		// If / Else conditionals
-		if age >= 21 {
-			println!("Bartender: What would you want to drink?");
-		} else {
-			println!("Bartender: Sorry you have to leave"); // Will print this part since the Conditional result is False
-		}
-	
-		age = 25;
-	
-		if age >= 21 {
-			println!("Bartender: What would you want to drink?"); // Will print this part since the Conditional result is True
-		} else {
-			println!("Bartender: Sorry you have to leave");
-		}
-	}
+        let mut age = 18;
 
-	{
-		println!("\n==================================================================");
-		println!("|| BASIC IF / ELSE IF / ELSE CONDITIONAL TESTS WITH && OPERATOR ||");
-		println!("==================================================================");
+        // If / Else conditionals
+        if age >= 21 {
+            println!("Bartender: What would you want to drink?");
+        } else {
+            println!("Bartender: Sorry you have to leave"); // Will print this part since the Conditional result is False
+        }
 
-		let mut age = 18;
-		let mut check_id: bool = false;
+        age = 25;
 
-		// the && operator means that BOTH expression must be true to execute the command
-		if age >= 21 && check_id {
-			println!("Bartender: What would you want to drink?");
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID"); // age AND check_id are both false so this part is printed
-		}
+        if age >= 21 {
+            println!("Bartender: What would you want to drink?"); // Will print this part since the Conditional result is True
+        } else {
+            println!("Bartender: Sorry you have to leave");
+        }
+    }
 
-		age = 21;
+    {
+        println!("\n==================================================================");
+        println!("|| BASIC IF / ELSE IF / ELSE CONDITIONAL TESTS WITH && OPERATOR ||");
+        println!("==================================================================");
 
-		// BOTH expression must evaluate to TRUE to execute the next step. Otherwise, the program jumps to the next conditional
-		if age >= 21 && check_id {
-			println!("Bartender: What would you want to drink?");
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID"); // age evaluates to true but check_id is still false so this part is printed
-		}
+        let mut age = 18;
+        let mut check_id: bool = false;
 
-		check_id = true;
+        // the && operator means that BOTH expression must be true to execute the command
+        if age >= 21 && check_id {
+            println!("Bartender: What would you want to drink?");
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID"); // age AND check_id are both false so this part is printed
+        }
 
-		if age >= 21 && check_id {
-			println!("Bartender: What would you want to drink?"); // age and check_id BOTH evaluates to TRUE so this part is printed
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID");
-		}
+        age = 21;
 
-		age = 16;
+        // BOTH expression must evaluate to TRUE to execute the next step. Otherwise, the program jumps to the next conditional
+        if age >= 21 && check_id {
+            println!("Bartender: What would you want to drink?");
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID"); // age evaluates to true but check_id is still false so this part is printed
+        }
 
-		if age >= 21 && check_id {
-			println!("Bartender: What would you want to drink?");
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave"); // age and check_id BOTH evaluates to true so this part is printed
-		} else {
-			println!("Bartender: Show me your ID");
-		}
-	}
+        check_id = true;
 
-	{
+        if age >= 21 && check_id {
+            println!("Bartender: What would you want to drink?"); // age and check_id BOTH evaluates to TRUE so this part is printed
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID");
+        }
 
-		println!("\n==================================================================");
-		println!("|| BASIC IF / ELSE IF / ELSE CONDITIONAL TESTS WITH || OPERATOR ||");
-		println!("==================================================================");
+        age = 16;
 
-		let mut age = 18;
-		let mut check_id: bool = false;
-		let knows_person: bool = true;
+        if age >= 21 && check_id {
+            println!("Bartender: What would you want to drink?");
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave"); // age and check_id BOTH evaluates to true so this part is printed
+        } else {
+            println!("Bartender: Show me your ID");
+        }
+    }
 
-		// the || operator means only one of the expressions needs to evaluate to TRUE to execute the next command
-		if age >= 21 && check_id || knows_person {
-			println!("Bartender: What would you want to drink?");	// This part will be printed because knows_person is true
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID");
-		}
+    {
+        println!("\n==================================================================");
+        println!("|| BASIC IF / ELSE IF / ELSE CONDITIONAL TESTS WITH || OPERATOR ||");
+        println!("==================================================================");
 
-		age = 21;
+        let mut age = 18;
+        let mut check_id: bool = false;
+        let knows_person: bool = true;
 
-		if age >= 21 && check_id || knows_person {
-			println!("Bartender: What would you want to drink?"); // in every scenario
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID");
-		}
+        // the || operator means only one of the expressions needs to evaluate to TRUE to execute the next command
+        if age >= 21 && check_id || knows_person {
+            println!("Bartender: What would you want to drink?"); // This part will be printed because knows_person is true
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID");
+        }
 
-		check_id = true;
+        age = 21;
 
-		if age >= 21 && check_id || knows_person {
-			println!("Bartender: What would you want to drink?");
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID");
-		}
+        if age >= 21 && check_id || knows_person {
+            println!("Bartender: What would you want to drink?"); // in every scenario
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID");
+        }
 
-		age = 16;
+        check_id = true;
 
-		if age >= 21 && check_id || knows_person {
-			println!("Bartender: What would you want to drink?");
-		} else if age < 21 && check_id {
-			println!("Bartender: Sorry you have to leave");
-		} else {
-			println!("Bartender: Show me your ID");
-		}
-	}
+        if age >= 21 && check_id || knows_person {
+            println!("Bartender: What would you want to drink?");
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID");
+        }
 
-	{
-		println!("\n==================");
-		println!("|| SHORTHAND IF ||");
-		println!("==================");
+        age = 16;
 
-		let mut age = 18;
-		let mut is_of_age = if age >= 21 {true} else {false};
+        if age >= 21 && check_id || knows_person {
+            println!("Bartender: What would you want to drink?");
+        } else if age < 21 && check_id {
+            println!("Bartender: Sorry you have to leave");
+        } else {
+            println!("Bartender: Show me your ID");
+        }
+    }
 
-		println!{"The person is of age: {}", is_of_age};
+    {
+        println!("\n==================");
+        println!("|| SHORTHAND IF ||");
+        println!("==================");
 
-		age = 22;
-		is_of_age = if age >= 21 {true} else {false};
-		println!{"The person is of age: {}", is_of_age};
+        let mut age = 18;
+        let mut is_of_age = if age >= 21 { true } else { false };
 
-	}
+        println! {"The person is of age: {}", is_of_age};
+
+        age = 22;
+        is_of_age = if age >= 21 { true } else { false };
+        println! {"The person is of age: {}", is_of_age};
+    }
 }

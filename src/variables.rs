@@ -7,68 +7,66 @@
 // 3. Rust is a block-scoped language
 
 pub fn run() {
+    {
+        println!("\n===================================");
+        println!("||  SIMPLE VARIABLE PLACEHOLDER  ||");
+        println!("===================================");
+        //This will work
+        let name = "Maxime";
+        let age = 36;
 
-	{
-		println!("\n===================================");
-		println!("||  SIMPLE VARIABLE PLACEHOLDER  ||");
-		println!("===================================");
-		//This will work
-		let name = "Maxime";
-		let age = 36;
-	
-		println!("\nMy name is {} and I am {}", name, age);
-	}
-	
-	//* {
-	//* 	let name = "Maxime";
-	//?		let age = 36;
-	
-	//* 	//BIRTHDAY !!!!
+        println!("\nMy name is {} and I am {}", name, age);
+    }
 
-	//? 	age = 37;	** Cannot assign twice to immutable variable 'age'
-	//? 				** We CAN'T reassign an immutable variable after it has been declared
-	//? 				** Equivalent to 'const'
-				
+    //* {
+    //* 	let name = "Maxime";
+    //?		let age = 36;
 
-	// 	println!("\nMy name is {} and I am {}", name, age);
-	// }
+    //* 	//BIRTHDAY !!!!
 
-	{
-		println!("\n=============================");
-		println!("||  MUTABLE VARIABLE TEST  ||");
-		println!("=============================");
-		let name = "Maxime";
-		let mut age = 36;	// Adding the 'mut' Keyword make the variable 'mutable'
-							// So we can reassign a new value to it
+    //? 	age = 37;	** Cannot assign twice to immutable variable 'age'
+    //? 				** We CAN'T reassign an immutable variable after it has been declared
+    //? 				** Equivalent to 'const'
 
-		// you MUST use the variable before it is modified or you get a compilation warning
-		println!("\nMy name is {} and I am {}", name, age);
-		
-		//BIRTHDAY !!!!
+    // 	println!("\nMy name is {} and I am {}", name, age);
+    // }
 
-		age = 37;
-		println!("\nMy name is {} and I am {}", name, age);
-	}
+    {
+        println!("\n=============================");
+        println!("||  MUTABLE VARIABLE TEST  ||");
+        println!("=============================");
+        let name = "Maxime";
+        let mut age = 36; // Adding the 'mut' Keyword make the variable 'mutable'
+                          // So we can reassign a new value to it
 
-	{
-		println!("\n============================");
-		println!("|| CONSTANT VARIABLE TEST ||");
-		println!("============================");
+        // you MUST use the variable before it is modified or you get a compilation warning
+        println!("\nMy name is {} and I am {}", name, age);
 
-		// By convention, const variables are all UPPERCASE and spaces with '_'
-		const LANGUAGE: &str = "Rust"; // you must specify a type with a :<type> after the variable name
+        //BIRTHDAY !!!!
 
-		println!("{} is my language", LANGUAGE);
-	}
+        age = 37;
+        println!("\nMy name is {} and I am {}", name, age);
+    }
 
-	{
-		println!("\n===================================");
-		println!("|| MULTIPLE VARIABLE ASSIGNATION ||");
-		println!("===================================");
+    {
+        println!("\n============================");
+        println!("|| CONSTANT VARIABLE TEST ||");
+        println!("============================");
 
-		let (name, age) = ("Maxime", 36);	// name all the variable in between parenthesis
-											// and assign them in the same way
+        // By convention, const variables are all UPPERCASE and spaces with '_'
+        const LANGUAGE: &str = "Rust"; // you must specify a type with a :<type> after the variable name
 
-		println!("My name is: {} and I am {} years old", name, age);
-	}
+        println!("{} is my language", LANGUAGE);
+    }
+
+    {
+        println!("\n===================================");
+        println!("|| MULTIPLE VARIABLE ASSIGNATION ||");
+        println!("===================================");
+
+        let (name, age) = ("Maxime", 36); // name all the variable in between parenthesis
+                                          // and assign them in the same way
+
+        println!("My name is: {} and I am {} years old", name, age);
+    }
 }
